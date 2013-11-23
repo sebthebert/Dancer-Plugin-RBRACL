@@ -1,0 +1,19 @@
+<h1>RBRACL Role Management</h1>
+
+<h2>[% '_USER' %] [% username %]</h2>
+
+<form class="form" role="form" method="post" action="/rbracl/user">
+    <div class="form-group">
+        <input type="text" class="form-control" id="name" name="name" 
+            placeholder="[% '_USER_NAME' %]">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" id="description" name="description" 
+            placeholder="[% '_USER_DESCRIPTION' %]">
+    </div>
+    <div class="form-group">
+        [% INCLUDE 'rbracl/select_roles.tt' %]
+    </div>
+    <button type="submit" class="btn btn-primary">
+    <i class="fa fa-save"></i> [% '_SAVE' %]</button>
+</form>

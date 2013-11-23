@@ -1,0 +1,5 @@
+<select name="select_roles" id="select_roles" class="input-medium" multiple="1">
+[% FOREACH role IN roles %]
+    <option value="[% role.key %]">[% role.key %]</option>
+[% END %]
+</select>

@@ -1,0 +1,30 @@
+<h1>RBRACL Role Management</h1>
+
+<h2>[% '_USERGROUPS' %]</h2>
+
+<table class="table table-bordered table-condensed table-hover table-stripped">
+<thead>
+<tr>
+    <th>[% '_NAME' %]</th>
+    <th>[% '_DESCRIPTION' %]</th>
+    <th><div class="text-center">[% '_ACTION' %]</div></th>
+</tr>
+</thead>
+<tbody>
+[% FOREACH ug IN usergroups %]
+<tr>
+    <td>[% ug.key %]</td>
+    <td>[% ug.value.description %]</td>
+    <td>
+    <div class="text-center">
+    <a data-toggle="tooltip" data-placement="top" title="[% '_EDIT' %]"
+        href="/rbracl/usergroup/[% ug.key %]"><i class="fa fa-edit"></i> </a>
+    <a data-toggle="tooltip" data-placement="top" title="[% '_DELETE' %]"
+        href="/rbracl/usergroup/[% ug.key %]"><i class="fa fa-trash-o"></i> </a>
+    </div>
+    </td>
+</tr>
+[% END %]
+</form>
+</tbody>
+</table>
